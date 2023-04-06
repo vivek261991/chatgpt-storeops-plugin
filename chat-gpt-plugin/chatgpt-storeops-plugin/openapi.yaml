@@ -1,0 +1,37 @@
+openapi: 3.0.1
+info:
+  title: TODO Plugin
+  description: A plugin that allows the user to fetch store details using ChatGPT.
+  version: 'v1'
+servers:
+  - url: PLUGIN_HOSTNAME
+paths:
+  /todos/{username}:
+    get:
+      operationId: getStoreData
+      summary: Get the list of store details
+      parameters:
+      - in: path
+        name: storeNumber
+        schema:
+            type: string
+        required: true
+        description: The store number.
+      responses:
+        "200":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/getStoreInfoResponse'
+
+components:
+  schemas:
+    getStoreInfoResponse:
+      type: object
+      properties:
+        todos:
+          type: array
+          items:
+            type: string
+          description: The list of store info.

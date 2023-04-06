@@ -1,0 +1,18 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "Walmart Store Plugin",
+    "name_for_model": "walmartstoreplugin",
+    "description_for_human": "Plugin for managing stores. You can view your store details.",
+    "description_for_model": "Plugin for managing stores. You can view your store details.",
+    "auth": {
+      "type": "none"
+    },
+    "api": {
+      "type": "openapi",
+      "url": "http://localhost:3333/openapi.yaml",
+      "is_user_authenticated": false
+    },
+    "logo_url": "http://localhost:3333/logo.png",
+    "contact_email": "vivek.v.subramanian@gmail.com",
+    "legal_info_url": "http://www.example.com/legal"
+  }
